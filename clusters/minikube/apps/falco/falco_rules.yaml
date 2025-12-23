@@ -1,0 +1,6 @@
+- rule: Write below /etc
+  desc: Detect writes below /etc
+  condition: write_event and evt.dir = "<" and fd.name startswith "/etc/"
+  output: "File below /etc opened for writing by %user.name (command=%proc.cmdline file=%fd.name)"
+  priority: WARNING
+  tags: [filesystem, rules]

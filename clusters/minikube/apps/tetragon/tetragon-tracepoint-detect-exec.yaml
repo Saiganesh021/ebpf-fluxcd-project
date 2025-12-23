@@ -1,0 +1,11 @@
+apiVersion: cilium.io/v2
+kind: TetragonTracepoint
+metadata:
+  name: trace-exec-detect
+  namespace: kube-system
+spec:
+  events:
+    - syscall: execve
+      match:
+        process:
+          name: "bash"

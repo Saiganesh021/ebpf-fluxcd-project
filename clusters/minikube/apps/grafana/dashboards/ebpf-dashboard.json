@@ -1,0 +1,18 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "eBPF Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Kernel Events",
+        "targets": [
+          {
+            "expr": "ebpf_events_total",
+            "legendFormat": "{{event}}"
+          }
+        ]
+      }
+    ]
+  }
+}

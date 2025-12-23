@@ -1,0 +1,9 @@
+serviceAccount:
+  create: true
+  name: falco
+rbac:
+  create: true
+  rules:
+    - apiGroups: [""]
+      resources: ["pods", "nodes"]
+      verbs: ["get", "list", "watch"]

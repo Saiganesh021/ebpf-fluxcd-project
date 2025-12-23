@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: tetragon-kprobe
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app: tetragon-kprobe
+  template:
+    metadata:
+      labels:
+        app: tetragon-kprobe
+    spec:
+      containers:
+      - name: tetragon
+        image: cilium/tetragon:latest
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /sys
+          name: sys
+          readOnly: true
+      volumes:
+      - name: sys
+        hostPath:
+          path: /sys

@@ -1,0 +1,11 @@
+# SSH / Secrets
+flux_ssh_key
+flux_ssh_key.pub
+flux_known_hosts
+*.pem
+id_rsa*
+known_hosts
+
+# OS
+.DS_Store
+Thumbs.db

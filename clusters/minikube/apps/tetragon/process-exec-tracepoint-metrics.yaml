@@ -1,0 +1,21 @@
+apiVersion: cilium.io/v1alpha1
+kind: TracingPolicy
+metadata:
+  name: process-exec-tracepoint-metrics
+spec:
+  tracepoints:
+  - subsystem: sched
+    event: sched_process_exec
+    args:
+    - index: 0
+      type: string
+      name: filename
+    - index: 1
+      type: string
+      name: argv
+    selectors:
+    - matchActions:
+      - action: Post
+        rateLimit: "0"
+        metrics:
+          enabled: true

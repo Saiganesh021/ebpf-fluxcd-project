@@ -1,0 +1,12 @@
+serverFiles:
+  alerts:
+    groups:
+      - name: security.rules
+        rules:
+          - alert: SuspiciousProcessExec
+            expr: tetragon_process_exec_total{arguments=~".*/etc/shadow.*"} > 0
+            for: 1m
+            labels:
+              severity: critical
+            annotations:
+              description: "Suspicious process detected in {{ $labels.pod }}"

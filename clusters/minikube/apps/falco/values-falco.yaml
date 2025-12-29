@@ -1,0 +1,5 @@
+additionalScrapeConfigs:
+  - job_name: 'falco'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['falco-metrics.falco.svc.cluster.local:8765']

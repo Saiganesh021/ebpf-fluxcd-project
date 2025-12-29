@@ -5,6 +5,5 @@ resources:
   - falco
   - prometheus
   - grafana
-  - test-pods
 
   

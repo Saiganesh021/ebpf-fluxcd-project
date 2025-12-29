@@ -1,4 +1,5 @@
 ﻿apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - grafana-values.yaml
+  - helmrelease.yaml   # your HelmRelease for Grafana
+# remove any missing .yaml references like grafana-values.yaml

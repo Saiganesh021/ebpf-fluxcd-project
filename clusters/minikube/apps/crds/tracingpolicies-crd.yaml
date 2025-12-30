@@ -11,7 +11,7 @@ spec:
     kind: TracingPolicy
     listKind: TracingPolicyList
   versions:
-    - name: v1alpha1
+    - name: v2
       served: true
       storage: true
       schema:

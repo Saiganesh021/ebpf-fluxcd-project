@@ -11,7 +11,7 @@ spec:
     kind: TetragonPolicy
     listKind: TetragonPolicyList
   versions:
-    - name: v1alpha1
+    - name: v2
       served: true
       storage: true
       schema:

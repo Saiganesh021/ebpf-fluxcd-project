@@ -9,3 +9,11 @@ known_hosts
 # OS
 .DS_Store
 Thumbs.db
+# ------------------------------
+# Flux / Helm generated artifacts
+# ------------------------------
+**/*-rendered.yaml
+**/*-manifest.yaml
+**/rendered/
+**/.helm/
+**/tetragon/tetragon/

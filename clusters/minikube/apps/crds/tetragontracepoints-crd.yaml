@@ -14,6 +14,9 @@ spec:
     - name: v1alpha1
       served: false
       storage: false
+      schema:
+        openAPIV3Schema:
+          type: object
     - name: v2
       served: true
       storage: true

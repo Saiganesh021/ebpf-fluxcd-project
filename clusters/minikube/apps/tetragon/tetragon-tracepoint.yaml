@@ -1,8 +1,0 @@
-apiVersion: cilium.io/v2
-kind: TetragonTracepoint
-metadata:
-  name: tracepoint-syscalls
-  namespace: kube-system
-spec:
-  events:
-    - syscall: execve

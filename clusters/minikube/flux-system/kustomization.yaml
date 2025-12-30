@@ -1,8 +1,5 @@
 ﻿apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../apps/tetragon
-  - ../apps/falco
-  - ../apps/prometheus
-  - ../apps/grafana
-  - ../apps/test-pods
+  - gotk-components.yaml
+  - gotk-sync.yaml

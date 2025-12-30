@@ -4,13 +4,16 @@ metadata:
   name: tetragontracepoints.cilium.io
 spec:
   group: cilium.io
+  scope: Cluster
   names:
-    kind: TetragonTracepoint
-    listKind: TetragonTracepointList
     plural: tetragontracepoints
     singular: tetragontracepoint
-  scope: Cluster
+    kind: TetragonTracepoint
+    listKind: TetragonTracepointList
   versions:
+    - name: v1alpha1
+      served: false
+      storage: false
     - name: v2
       served: true
       storage: true

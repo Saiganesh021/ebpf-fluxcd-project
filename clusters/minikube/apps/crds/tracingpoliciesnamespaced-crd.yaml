@@ -11,6 +11,9 @@ spec:
     kind: TracingPolicyNamespaced
     listKind: TracingPolicyNamespacedList
   versions:
+    - name: v1alpha1
+      served: false
+      storage: false
     - name: v2
       served: true
       storage: true

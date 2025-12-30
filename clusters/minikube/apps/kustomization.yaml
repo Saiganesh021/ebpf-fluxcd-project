@@ -1,9 +1,11 @@
 ﻿apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ./crds
-  - ./tetragon
+  - ./crds        # This now correctly points to the folder created in Step 2
   - ./falco
-  - ./prometheus
   - ./grafana
+  - ./prometheus
   - ./test-pods
+  - ./tetragon
+  - ./nginx/deployment.yaml
+  - ./nginx/service.yaml

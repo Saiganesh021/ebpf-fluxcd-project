@@ -1,7 +1,4 @@
 ﻿apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - tetragon-kprobe.yaml
-  - tetragon-policy.yaml
-  - tetragon-tracepoint.yaml
-  - tetragon-tracepoint-detect-exec.yaml
+  - ./clusters/minikube/apps/tetragon/

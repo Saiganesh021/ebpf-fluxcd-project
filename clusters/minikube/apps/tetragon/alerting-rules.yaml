@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tetragon-alerts
+  namespace: flux-system
+data:
+  alerting-rules.yaml: |
+    # Paste your original alerting rules here, indented by 4 spaces
+    groups:
+      - name: tetragon-rules
+        rules:
+          - alert: HighProcessExec
+            expr: tetragon_process_exec_total > 100
 serverFiles:
   alerts:
     groups:

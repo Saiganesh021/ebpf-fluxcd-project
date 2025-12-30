@@ -1,4 +1,8 @@
 ﻿apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ./clusters/minikube/apps/tetragon/
+  - alerting-rules.yaml
+  - helmrelease.yaml
+  - process-exec.yaml
+  - tetragon-policy.yaml
+  # ... list all other .yaml files in this folder

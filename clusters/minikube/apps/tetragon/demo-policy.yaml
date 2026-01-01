@@ -1,0 +1,10 @@
+apiVersion: cilium.io/v1alpha1
+kind: TracingPolicy
+metadata:
+  name: demo-execve
+spec:
+  kprobes:
+    - call: "__x64_execve"
+      args:
+        - index: 0
+          type: string

@@ -1,8 +1,0 @@
-adminUser: admin
-adminPassword: admin123
-dashboards:
-  default:
-    ebpf-dashboard:
-      file: dashboards/ebpf-dashboard.json
-    security-dashboard:
-      file: dashboards/security-dashboard.json

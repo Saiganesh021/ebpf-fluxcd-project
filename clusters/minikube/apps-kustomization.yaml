@@ -10,19 +10,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: nginx
-      namespace: default
   timeout: 2m
   wait: true
   force: true
-  resources:
-    - ./crds
-    - ./falco
-    - ./grafana
-    - ./nginx
-    - ./prometheus
-    - ./test-pods
-    - ./tetragon
